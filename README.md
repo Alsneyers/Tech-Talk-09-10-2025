@@ -40,18 +40,29 @@
 8. Choose: **Koala-Verification-Agent-role**
 9. Click **Create function**
 
-#### Step 4: Configure Lambda
+#### Step 4: Configure Lambda Code
 
 1. In the **Code** tab, replace the default code with the code from `lambda/lambda_function.py`
 2. Click **Deploy**
-3. Click **Configuration** → **Environment variables** → **Edit**
-4. Click **Add environment variable**
-5. Set:
+
+#### Step 5: Configure Lambda Settings
+
+1. Click **Configuration** → **General configuration** → **Edit**
+2. Set:
+   - **Timeout**: `15 min 0 sec`
+   - **Memory**: `1028 MB`
+3. Click **Save**
+
+#### Step 6: Add Environment Variable
+
+1. Click **Configuration** → **Environment variables** → **Edit**
+2. Click **Add environment variable**
+3. Set:
    - Key: `RECIPIENT_PHONE`
    - Value: Your phone number in E.164 format (example: `+32470123456`)
-6. Click **Save**
+4. Click **Save**
 
-#### Step 5: Verify Lambda Permissions
+#### Step 7: Verify Lambda Permissions
 
 The existing **Koala-Verification-Agent-role** should already have these policies:
 - ✅ `AmazonS3ReadOnlyAccess`
@@ -63,7 +74,7 @@ To verify:
 2. Click on the role name **Koala-Verification-Agent-role**
 3. Confirm the policies are attached
 
-#### Step 6: Add S3 Trigger
+#### Step 8: Add S3 Trigger
 
 1. In Lambda, click **Add trigger**
 2. Select **S3**
@@ -76,13 +87,13 @@ To verify:
 
 ### Part 3: Upload Your First Koala Image (10 minutes)
 
-#### Step 7: Download the Upload Page
+#### Step 9: Download the Upload Page
 
 1. Download `KoalaSpottrFrontEnd.html` from this repository
 2. Save it to your computer
 3. **Double-click** to open it in your browser
 
-#### Step 8: Generate Presigned Upload URL
+#### Step 10: Generate Presigned Upload URL
 
 1. Open **AWS CloudShell** (click the `>_` icon in AWS Console top bar)
 2. Wait for CloudShell to initialize (~10 seconds)
@@ -91,7 +102,7 @@ To verify:
 5. Press **Enter**
 6. Copy the **entire long URL** that's output
 
-#### Step 9: Upload Your Image
+#### Step 11: Upload Your Image
 
 1. Go back to the **KoalaSpottrFrontEnd.html** page in your browser
 2. **Paste the presigned URL** in STEP 1
@@ -100,7 +111,7 @@ To verify:
 5. Click **"Upload 🚀"**
 6. Wait for the success message!
 
-#### Step 10: Check Your SMS
+#### Step 12: Check Your SMS
 
 Within 10-15 seconds, you should receive an SMS with:
 - ✅ **"KOALA DETECTED!"** if it's a koala
