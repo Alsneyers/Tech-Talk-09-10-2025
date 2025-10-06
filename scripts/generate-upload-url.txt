@@ -1,0 +1,1 @@
+python3 -c "import boto3; print(boto3.client('s3', region_name='eu-central-1').generate_presigned_url('put_object', Params={'Bucket': 'YOUR-BUCKET-NAME', 'Key': 'my-koala.jpg'}, ExpiresIn=3600))"
