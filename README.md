@@ -68,6 +68,9 @@ The existing **Koala-Verification-Agent-role** should already have these policie
 - ✅ `AmazonS3ReadOnlyAccess`
 - ✅ `AmazonRekognitionFullAccess`
 - ✅ `AmazonSNSFullAccess`
+- ✅ `CloudWatchFullAccess`
+- ✅ `Lambda-SMS-Send-Permission`
+- ✅ `S3-KMS-Decrypt-Permission`
 
 To verify:
 1. Go to **Configuration** → **Permissions**
