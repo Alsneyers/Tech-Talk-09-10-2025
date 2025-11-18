@@ -104,6 +104,7 @@ To verify:
 4. Replace `YOUR-BUCKET-NAME` with your actual bucket name
 5. Press **Enter**
 6. Copy the **entire long URL** that's output
+**Note:** !This presigned URL needs to be used within 1 hour,or it will expire and not be valid anymore. In case of expiry, you can generate a new URL!
 
 #### Step 11: Upload Your Image
 
